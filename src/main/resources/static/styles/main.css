@@ -1,0 +1,263 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
+body {
+    font: 15px "Segoe UI Historic", "Segoe UI", Helvetica;
+    background-color: #EEEEEE;
+}
+
+.basic-link {
+    color: #1B998B;
+    text-decoration: none;
+    background: none;
+    border: none;
+}
+
+.basic-link:link, .basic-link:visited {
+    color: #1B998B;
+}
+
+.sidebar {
+    list-style-type: none;
+    margin: 0;
+    width: 20%;
+    top: 5%;
+    float: left;
+}
+
+.sidebar a {
+    display: block;
+    padding: 7px 7px 7px 10px;
+    margin: 20% 0%;
+    text-decoration: none;
+    font-size: 25px;
+    color: #1B998B;
+}
+
+.sidebar a:hover {
+    background-color: #1B998B;
+    border: 0px solid;
+    border-radius: 20px;
+    color: #FFFFFF;
+}
+
+.avatar {
+    width: 290px;
+}
+
+.header {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    background-color: #333;
+
+}
+
+.header img {
+    height: 50px;
+    margin-top: 5px;
+}
+
+.header li {
+    float: left;
+}
+
+.header a:hover {
+    background-color: #222222;
+}
+
+.header img:hover {
+    background-color: #222222;
+}
+
+.search {
+    height: 47px;
+    width: 200px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('../images/searchicon.png');
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 2px;
+    padding: 12px 20px 12px 5px;
+    transition: width 0.4s ease-in-out;
+    float: right;
+}
+
+.invisible-button {
+    height: 100%;
+}
+
+.search:focus {
+    width: 500px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-container > div {
+    width: 300px;
+    margin: 3px;
+}
+
+.white-box {
+    border: 1px solid #DDD;
+    background-color: #F9F9F9;
+    padding: 4px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.green-link {
+    display: block;
+    padding: 10px 0px;
+    margin: 3px 0px;
+    width: 290px;
+    text-decoration: none;
+    font-size: 17px;
+    background-color: #1B998B;
+    border: 0px solid;
+    border-radius: 5px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.color-change-link {
+    display: block;
+    padding: 10px 0px;
+    margin: 3px 0px;
+    width: 290px;
+    text-decoration: none;
+    font-size: 17px;
+    border: 0px solid;
+    border-radius: 5px;
+    color: #1B998B;
+    text-align: center;
+}
+
+.color-change-link:hover {
+    background-color: #1B998B;
+    color: #FFFFFF;
+}
+
+
+.red-button {
+    background-color: #C1666B;
+    border: 0px solid;
+    height: 50px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    text-align: center;
+    margin: 2px 5px 2px 5px;
+    font-size: 17px;
+}
+
+.gray-button {
+    background-color: #C1666B;
+    border: 0px solid;
+    height: 50px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    text-align: center;
+    margin: 2px 5px 2px 5px;
+    font-size: 17px;
+}
+
+.overlay-layer {
+    width: 290px;
+    margin-top: -44px;
+    height: 40px;
+    position: absolute;
+    opacity: 0.5;
+    background-color: #000000;
+    z-index: 0;
+    font-size: 17px;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 40px;
+}
+
+.upload_btn {
+    position: absolute;
+    background-color: #000000;
+    margin-top: -44px;
+    height: 40px;
+    z-index: 10;
+    opacity: 0;
+}
+
+.flex-content {
+    display: flex;
+    justify-content: left;
+    border-bottom: 1px solid #DDD;
+    background-color: #F9F9F9;
+    padding: 3px;
+}
+
+.flex-content div {
+    word-break: break-all;
+}
+
+.flex-content img {
+    flex: 0 0 auto;
+}
+
+.round-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.square-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin: 5px 5px 5px auto;
+    border-radius: 10%;
+}
+
+.random-six {
+    display: flex;
+    justify-content: center;
+}
+
+.random-six > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.small-round-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.tiny-round-img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.message-area {
+    width: 95%;
+    height: 60px;
+    border: 1px solid #cccccc;
+    padding: 5px;
+}
+
+.message-area textarea:focus {
+    border: 1px solid #cccccc;
+}
