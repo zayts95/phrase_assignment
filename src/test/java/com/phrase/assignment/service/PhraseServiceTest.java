@@ -63,7 +63,6 @@ class PhraseServiceTest {
 
     @Test
     void testSetAccount_existingAccount() throws Exception {
-        // Prepare test data
         AccountConfiguration accountConfiguration = new AccountConfiguration();
         accountConfiguration.setUserName(TEST_USERNAME);
         accountConfiguration.setPassword(TEST_PASSWORD);
@@ -72,16 +71,13 @@ class PhraseServiceTest {
 
         when(accountConfigRepository.findById(TEST_USERNAME)).thenReturn(Optional.of(accountConfiguration));
 
-        // Call method under test
         ModelAndView result = phraseService.setAccount(TEST_USERNAME, TEST_PASSWORD, request, modelAndView);
 
-        // Verify results
         verify(session).setAttribute("account", TEST_USERNAME);
         verify(session).setAttribute("token", TEST_TOKEN);
         assertEquals("redirect:projects", result.getViewName());
     }
 
-    // Add more test cases for setAccount method like invalid password, new account, etc.
 
     @Test
     void testGetProjects_authorized() {
@@ -110,26 +106,19 @@ class PhraseServiceTest {
         when(session.getAttribute("account")).thenReturn(TEST_USERNAME);
         when(accountConfigRepository.findById(TEST_USERNAME)).thenReturn(Optional.of(accountConfiguration));
 
-        // Call method under test
         ResponseEntity<?> result = phraseService.getProjects(request);
 
-        // Verify results
         assertEquals(HttpStatus.OK, result.getStatusCode());
-        // Add more assertions based on the expected response
     }
 
 
     @Test
     void testGetProjects_unauthorized() {
-        // Prepare test data
         when(session.getAttribute("account")).thenReturn(null);
 
-        // Call method under test
         ResponseEntity<?> result = phraseService.getProjects(request);
 
-        // Verify results
         assertEquals(HttpStatus.UNAUTHORIZED, result.getStatusCode());
     }
 
-    // Add more test cases for other methods in PhraseService class
 }
